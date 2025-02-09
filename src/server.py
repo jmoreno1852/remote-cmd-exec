@@ -10,7 +10,7 @@ async def server(s):
     (exitcode, output) = subprocess.getstatusoutput(cmd) #If negative -> Has finished
     print(f"CMD> {output}")
     #
-    await websocket.send(str(exitcode))
+    await s.send(str(exitcode))
 
 
 async def main():
