@@ -1,7 +1,6 @@
 import websockets
-import logging
 import asyncio
-
+import subprocess
 #Que necesito
 #Inicializar el servidor con websockets
 #Recibimos el comando en el socket -> Display en caso de que se ejecute ->
@@ -13,8 +12,5 @@ async def server(s):
     await s.send(str(exitcode))
 
 
-async def main():
-    async with s.serve(server,"127.0.0.1" , port=4444):
-        await asyncio.Future()
 
 
